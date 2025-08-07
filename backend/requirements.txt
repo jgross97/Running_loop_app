@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+osmnx
+networkx
+scikit-learn
+requests

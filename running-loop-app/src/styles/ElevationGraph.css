@@ -1,0 +1,119 @@
+.elevation-graph-container {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  max-width: 1400px;
+  margin: 24px auto 24px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.elevation-graph-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px 12px 24px;
+  border-bottom: 1px solid #e0e0e0;
+  background: #fafafa;
+}
+
+.elevation-graph-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.elevation-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+.elevation-stats span {
+  padding: 4px 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.elevation-graph-chart-container {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+}
+
+/* Custom tooltip styling */
+.elevation-tooltip {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.tooltip-label {
+  margin: 0 0 5px 0;
+  font-weight: 600;
+  color: #333;
+  font-size: 12px;
+}
+
+.tooltip-value {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: #666;
+}
+
+.tooltip-color {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.elevation-graph-empty {
+  padding: 40px 24px;
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+.elevation-graph-empty p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .elevation-graph-container {
+    width: 95vw;
+    margin: 16px auto;
+  }
+  
+  .elevation-graph-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 16px 20px;
+  }
+  
+  .elevation-stats {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .elevation-stats span {
+    font-size: 12px;
+  }
+  
+  .elevation-graph-canvas-container {
+    padding: 16px;
+  }
+}
