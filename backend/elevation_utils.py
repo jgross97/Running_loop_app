@@ -145,8 +145,9 @@ def get_route_elevation_profile(G, path: List, sample_rate: int = 10) -> dict:
     return {
         "elevation_gain": round(elevation_gain, 1),
         "elevation_loss": round(elevation_loss, 1),
-        "max_elevation": round(max_elevation, 1) if max_elevation else None,
-        "min_elevation": round(min_elevation, 1) if min_elevation else None,
+        # Handle 0-meter elevations correctly by explicitly checking for None
+        "max_elevation": round(max_elevation, 1) if max_elevation is not None else None,
+        "min_elevation": round(min_elevation, 1) if min_elevation is not None else None,
         "elevation_profile": elevations,
         "smoothed_elevation_profile": [round(e, 1) for e in smoothed_elevations] if smoothed_elevations else []
     }
